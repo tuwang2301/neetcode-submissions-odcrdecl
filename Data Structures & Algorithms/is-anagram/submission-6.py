@@ -1,0 +1,14 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t): return False
+
+        m1 = dict()
+        for c in s:
+            m1[c] = m1.get(c, 0) + 1
+
+        m2 = dict()
+        for c in t:
+            m2[c] = m2.get(c, 0) + 1
+
+        return m1 == m2
+            
